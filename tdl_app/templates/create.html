@@ -1,0 +1,12 @@
+<div><a href="{% url 'index' %}">Home</a></div>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="body">
+        <div class="table">
+            <table>
+                {{form.as_table}}   
+            </table>
+        </div>
+        <div class="botton"><input type="submit" class="submit" value="완료"></div>
+    </div>
+</form>

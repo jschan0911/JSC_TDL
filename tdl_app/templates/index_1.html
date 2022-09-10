@@ -1,0 +1,19 @@
+<div>
+    <a href="{% url 'create' %}">Create To Do List</a>
+</div>
+<div>진행</div>
+<div>
+    {% for tdl in ing_tdls %}
+    <div><a href="{% url 'detail' tdl.id %}">{{ tdl.title }}</a></div>
+    <div><a href="{% url 'tdlend' tdl.id %}">완료</a></div>
+    <div><a href="{% url 'tdldelete' tdl.id %}">삭제</a></div>
+    {% endfor %}
+</div>
+<div>완료</div>
+<div>
+    {% for tdl in end_tdls %}
+    <div><a href="{% url 'detail' tdl.id %}">{{ tdl.title }}</a></div>
+    <div><a href="{% url 'tdlend' tdl.id %}">완료</a></div>
+    <div><a href="{% url 'tdldelete' tdl.id %}">삭제</a></div>
+    {% endfor %}
+</div>
